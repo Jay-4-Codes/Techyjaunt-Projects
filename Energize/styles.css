@@ -36,7 +36,30 @@ a {
     background-color: #5a5a5a;
     color: #fff;
 }
-
+.btn-primary,
+.btn-secondary {
+    color: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+}
+.btn-primary {
+    background-color: #007bff;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+.btn-secondary {
+    background-color: #adb1b4;
+}
+.btn-secondary:hover {
+    background-color: #555b5f;
+}
+.hero-btns {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
 /* Navbar styles */
 .navbar {
     display: flex;
@@ -109,6 +132,29 @@ nav input:checked ~ .hamburger::after {
     top: 0;
 }
 
+/*Hero section styles */
+.hero .container {
+  background: url(/energize/images/hero-bg.png) no-repeat;
+  background-size: contain; 
+  background-position: center bottom;
+  min-height: 400px;
+  width: 100%;
+}
+.hero {
+    margin-bottom: 3rem; 
+}
+.hero .hero-content {
+   width: 60%;
+}
+.hero-head {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.hero-head,
+.hero-text {
+    margin-bottom: 1rem;
+}
+
 /*Responsive styles */
 @media (max-width: 768px) {
     .hamburger {
@@ -151,4 +197,29 @@ nav input:checked ~ .hamburger::after {
         padding: 0.8rem 0;
         display: block;
     }
+}
+@media screen and (max-width: 600px) {
+    .hero .container {
+        background: url(/energize/images/hero-bg-mobile.png) no-repeat;
+        background-size: 305px 400px;
+        background-position: bottom;
+        height: 700px;
+    }
+    .hero .hero-content {
+        width: 100%;
+        text-align: center;
+    }
+    .hero-head {
+        font-size: 1.5rem;
+        font-weight: bolder;
+    }
+    .hero-text {
+        font-size: 1rem;
+    }
+    .hero-btns {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    
 }
