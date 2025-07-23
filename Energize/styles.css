@@ -92,10 +92,13 @@ ul li a:hover {
 /* Hamburger menu styles */
 .hamburger {
     display: none;
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
     width: 30px;
     height: 3px;
     background: #333;
-    position: relative;
+    transform: translateY(-50%);
     cursor: pointer;
     transition: 0.3s ease;
 }
@@ -137,8 +140,11 @@ nav input:checked ~ .hamburger::after {
   background: url(/energize/images/hero-bg.png) no-repeat;
   background-size: contain; 
   background-position: center bottom;
-  min-height: 400px;
+  min-height: 550px;
   width: 100%;
+  display: flex;
+  align-items: flex-start;
+  padding: 2rem;
 }
 .hero {
     margin-bottom: 3rem; 
@@ -155,6 +161,31 @@ nav input:checked ~ .hamburger::after {
     margin-bottom: 1rem;
 }
 
+/*Main Styles */
+.middle-section {
+    background: #000;
+    color: #fff;
+    padding: 0.62rem 0 2.5rem;
+}
+.middle-section .video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.video-preview {
+    margin-bottom: 1rem;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.container-md {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+}
 /*Responsive styles */
 @media (max-width: 768px) {
     .hamburger {
@@ -199,9 +230,15 @@ nav input:checked ~ .hamburger::after {
     }
 }
 @media screen and (max-width: 600px) {
+    .container {
+        padding: 1rem,;
+    }
+    .logo {
+        width: 100px;
+    }
     .hero .container {
         background: url(/energize/images/hero-bg-mobile.png) no-repeat;
-        background-size: 305px 400px;
+        background-size: 305px 370px;
         background-position: bottom;
         height: 700px;
     }
