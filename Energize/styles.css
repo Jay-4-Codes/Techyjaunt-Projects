@@ -1,0 +1,154 @@
+ * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    background-color: #fff;
+    color: #333;
+}
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Button styles */
+.btn {
+    padding: 0.5rem 1rem;
+    background-color: #6b6a6a;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #5a5a5a;
+    color: #fff;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 0.5rem;
+    position: relative; /* FIXED: Added position relative */
+}
+
+.logo img {
+    width: 150px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    font-weight: 600;
+}
+
+ul li a {
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    color: #007bff;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    width: 30px;
+    height: 3px;
+    background: #333;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: #333;
+    transition: 0.3s ease;
+}
+
+.hamburger::before {
+    top: -10px;
+}
+
+.hamburger::after {
+    top: 10px;
+}
+
+nav input:checked ~ .hamburger {
+    background: transparent;
+}
+
+nav input:checked ~ .hamburger::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+nav input:checked ~ .hamburger::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+/*Responsive styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        z-index: 1001;
+    }
+
+    .main-nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: -50%;
+        background: #fff;
+        width: 50%;
+        height: 100vh;
+        padding: 2rem 1rem;
+        z-index: 1000;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.15);
+        transition: right 0.3s ease;
+    }
+
+    nav input:checked ~ .main-nav {
+        display: block;
+        right: 0;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .main-nav ul li {
+        text-align: center;
+        padding: 0.5rem 0;
+    }
+
+    .main-nav ul li a {
+        font-size: 1.1rem;
+        padding: 0.8rem 0;
+        display: block;
+    }
+}
