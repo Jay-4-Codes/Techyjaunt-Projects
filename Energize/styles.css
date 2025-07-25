@@ -141,7 +141,7 @@ nav input:checked ~ .hamburger::after {
 
 /*Hero section styles */
 .hero .container {
-  background: url(/Energize/images/hero-bg.png) no-repeat;
+  background: url(./images/hero-bg.png) no-repeat;
   background-size: contain; 
   background-position: center bottom;
   min-height: 550px;
@@ -452,7 +452,7 @@ h4 {
         width: 100px;
     }
     .hero .container {
-        background: url(/Energize/images/hero-bg-mobile.png) no-repeat;
+        background: url(./images/hero-bg-mobile.png) no-repeat;
         background-size: 305px 370px;
         background-position: bottom;
         height: 700px;
