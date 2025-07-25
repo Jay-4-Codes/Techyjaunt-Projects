@@ -358,7 +358,49 @@ h4 {
   display: inline;
 }
 
-
+/*Footer styles */
+.footer {
+    background: #111;
+    color: #fff;
+}
+.footer img {
+    width: 200px;
+}
+.footer-links {
+    list-style: none;
+    margin-top: 0.5rem;
+}
+.footer-links li {
+    line-height: 2.5;
+}
+.footer-links a {
+    color: #ccc !important;
+    cursor: pointer;
+}
+.footer-links a:hover {
+    color: #fff !important;
+}
+.footer-bottom {
+    text-align: center;
+}
+.footer-bottom p {
+    font-size: 0.9rem;
+    color: #ccc;
+    text-wrap: pretty;
+}
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.footer-social a {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+.footer-social a:hover {
+    color: #ccc;
+}
 /*Responsive styles */
 @media (max-width: 768px) {
     .hamburger {
@@ -458,4 +500,13 @@ h4 {
     .faq-answer p{
         font-size: 0.8rem;
     } 
+    .footer img {
+        width: 150px;
+    }
+    .footer-bottom {
+        margin-top: 1rem;
+    }   
+    .footer-bottom p {
+        font-size: 0.7rem;
+    }
 }
