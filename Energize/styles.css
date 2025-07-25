@@ -71,7 +71,7 @@ a {
     align-items: center;
     background-color: #fff;
     padding: 0.5rem;
-    position: relative; /* FIXED: Added position relative */
+    position: relative; 
 }
 
 .logo img {
